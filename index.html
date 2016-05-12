@@ -233,6 +233,206 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/12/伪类布局小技巧/" itemprop="url">
+                  伪类布局小技巧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-12T19:41:35+08:00" content="2016-05-12">
+              2016-05-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/12/伪类布局小技巧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/12/伪类布局小技巧/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###布局样式:中间固定宽度，两边自适应；</p>
+<p>下面是小布局：</p>
+<pre><code>&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;div1&quot;&gt;
+        &lt;img src=&quot;logo.png&quot; alt=&quot;&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;2&lt;/li&gt;
+            &lt;li&gt;3&lt;/li&gt;
+            &lt;li&gt;4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>CSS样式：</p>
+<pre><code>.box{
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+    }
+    .div1{
+        margin: 0 auto;
+        width:875px;
+        height: 75px;
+    }
+    .div1 img{
+        height: 75px;
+        float: left;
+    }
+    ul{
+        width: 800px;
+        height: 75px;
+        overflow: hidden;
+        float: left;
+    }
+    ul li{
+        width: 200px;
+        height: 75px;
+        float: left;
+        background-color: blue;
+    }
+    .div1::before{
+        content: &apos;&apos;;
+        width: 100%;
+        height: 75px;
+        margin-left: -100%;
+        background: red;
+        display: block;
+        float: left;
+    }
+    .div1::after{
+        content: &apos;&apos;;
+        width: 100%;
+        height: 75px;
+        margin-right: -100%;
+        background: red;
+        display: block;
+        float: left;
+    }
+</code></pre><p>###伪类的五个种类：</p>
+<p>/<em>div1内容或标签之前的伪类样式</em>/</p>
+<pre><code>  .div1::before{
+content: &apos;我是before&apos;;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: block;
+background-color: blue;
+color: white;
+}
+</code></pre><p>/<em>div1之后的伪类样式</em>/</p>
+<pre><code>.div1::after{
+content: &apos;我是after&apos;;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+display: block;
+background-color: blue;
+color: white;
+}
+</code></pre><p>/<em>第一行内容样式改变</em>/</p>
+<pre><code>.div1::first-line{
+content: &apos;&apos;;
+display: block;
+/*background-color: blue;*/
+color: blue;
+}
+</code></pre><p>/<em>第一个字符样式发生改变</em>/</p>
+<pre><code>.div1::first-letter{
+content: &apos;&apos;;
+display: block;
+background-color: blue;
+color: pink;
+}
+</code></pre><p>/<em>选择的部分样式发生改变</em>/</p>
+<pre><code>::selection{
+background: yellow;
+color: purple;
+};
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/11/我的第二个博客/" itemprop="url">
                   我的第二个博客
                 </a>
@@ -591,7 +791,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
