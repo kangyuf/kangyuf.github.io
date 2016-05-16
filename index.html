@@ -233,6 +233,146 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/16/gulp的构建/" itemprop="url">
+                  gulp的构建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-16T20:34:11+08:00" content="2016-05-16">
+              2016-05-16
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/16/gulp的构建/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/16/gulp的构建/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p></p><h3>搭建gulp</h3><br>gulp网址：<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">http://www.gulpjs.com.cn/</a><p></p>
+<p>gulp插件网址：<a href="http://gulpjs.com/plugins/" target="_blank" rel="external">http://gulpjs.com/plugins/</a></p>
+<p>1.创建项目文件夹  - -&gt;安装gulp文件  sudo npm install –global gulp（sudo是为了获取权限）</p>
+<p>2.npm install –save-dev gulp  作为项目的开发依赖（devDependencies）安装</p>
+<p>3.项目初始化           - -&gt;在gulp下 npm init</p>
+<p>4.配置gulp插件 npm install –save-dev gulp-concat或者 npm install gulp-concat –save-dev</p>
+<p>配置 gulpfile.js</p>
+<pre><code>var gulp = require(&apos;gulp&apos;);
+var concat = require(&apos;gulp-concat&apos;);
+var jsmin =require(&apos;gulp-jsmin&apos;);
+gulp.task(&apos;kangkang&apos;,function(){
+return gulp.src(&apos;js/*.js’)    //获取js文件夹下的所有js文件路径相对于gulpfile.js来的  {gulp.src() 目标文件}
+.pipe(concat(&apos;new.js&apos;))     //所有js文件合并成一个新的名为new.js的文件中  {gulp-concat 合并文件}
+.pipe(jsmin())     //将js文件压缩（ps:这一步要在合并完成之后再进行） {pipe() 管道，上面的输出就是下面的输入}
+.pipe(gulp.dest(&apos;newJS/&apos;))     //新文件的存放位置即新的文件夹 {gulp.dest 目标输出}
+})
+</code></pre><p>gulp.task()3个参数 1.任务名 2.任务依赖3.回调</p>
+<p>任务名即kangkang，直接在终端（gulp）里gulp kangkang；</p>
+<p>gulp.task(‘default’,[‘a’,’b’],function(){ console.log(‘haha’)});<br>gulp.task(‘a’,function(){ console.log(‘a’)})<br>gulp.task(‘b’,function(){console.log(‘b’)})</p>
+<p>[‘a’,’b’]即任务依赖，ab需要按照顺序来执行，且default最后执行；</p>
+<p>回调，即function函数；</p>
+<p>ulp-jsmin js文件压缩<br>gulp-cssmin css文件压缩<br>gulp-htmlmin html文件压缩</p>
+<p></p><h3>gulp文件到线上</h3><br>1、在gulp下新建文件夹html  2、html下新建四个文件夹<p></p>
+<p>1、desk—&gt;html,css,js     最后压缩好放在线上的文件夹</p>
+<p>2、public—&gt;js     公共用的第三方插件库，jquery等</p>
+<p>3、src—&gt;css,js     原生的css,js文件</p>
+<p>4、views—&gt;html文件     所有的html文件</p>
+<p>5、html里新建gulpfile.js、package.json、README.md文件</p>
+<p>6、在gulp文件下里进行配置jade等文件， npm install gulp-jade –save-dev</p>
+<p>gulpfile.js代码</p>
+<pre><code>var gulp = require(&apos;gulp&apos;);
+var concat = require(&apos;gulp-concat&apos;);
+var jade = require(&apos;gulp-jade&apos;);
+
+gulp.task(&apos;kang&apos;,function(){
+return gulp.src(&apos;views/*.jade&apos;)
+.pipe(concat(&apos;index.html&apos;))
+.pipe(gulp.dest(&apos;desk/html/&apos;))
+})
+</code></pre><p>终端在html中输入gulp kang</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/13/本地文件上传到github/" itemprop="url">
                   本地文件上传到github
                 </a>
@@ -788,7 +928,7 @@ color: purple;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
