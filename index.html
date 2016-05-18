@@ -322,6 +322,9 @@ text-info：通知信息，使用浅蓝色（#31708f）
 text-warning：警告，使用黄色（#8a6d3b）
 text-danger：危险，使用褐色（#a94442） --&gt;
 
+  (固定不同级别标题字体大小，h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px;)
+  (重新设置了margin-top和margin-bottom的值，  h1~h3重置后的值都是20px；h4~h6重置后的值都是10px)
+
 &lt;h1 text-muted&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/h1&gt;
 &lt;small&gt;this is first bootstrap class&lt;/small&gt;
 &lt;h2 class=&quot;text-primary&quot;&gt;你好，世界！&lt;/h2&gt;
@@ -355,6 +358,7 @@ text-justify：两端对齐 就是文本较长时到头自动换行下来 --&gt;
 
 &lt;code&gt;    （内容带有4px圆角带颜色背景，字体也有颜色）ps：code一般是针对于单个单词或单个句子的代码；
   div标签是一个块级标签，使用方法&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+  (不管使用哪种代码风格，在代码中碰到小于号（&lt;）要使用硬编码“&amp;lt;”来替代，大于号(&gt;)使用“&amp;gt;”来替代)
 &lt;/code&gt;
 
 只需要在pre标签上添加类名“.pre-scrollable”，就可以控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条。
