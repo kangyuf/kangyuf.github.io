@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -246,7 +246,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T19:47:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -284,39 +284,21 @@
       
         
           
-            <p></p><h3>bootstrap安装</h3><br>bootstrap网址：<a href="http://v3.bootcss.com/（中文版）" target="_blank" rel="external">http://v3.bootcss.com/（中文版）</a><br>bootstrap网址：<a href="http://getbootstrap.com/（英文版）" target="_blank" rel="external">http://getbootstrap.com/（英文版）</a><br>1、bootstrap.min.css<p></p>
-<p>2、jquery.min.js（jquery要提前引入，bootstrap.min.js代码的作用是所有的jquery插件）</p>
-<p>3、bootstrap.min.js</p>
-<p>bootstrap基本模板：</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-  &lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;
-&lt;title&gt;Bootstrap&lt;/title&gt;
-&lt;!-- Bootstrap --&gt;
-&lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+            <h3>bootstrap安装</h3><br>bootstrap网址：<a href="http://v3.bootcss.com/（中文版）" target="_blank" rel="external">http://v3.bootcss.com/（中文版）</a><br>bootstrap网址：<a href="http://getbootstrap.com/（英文版）" target="_blank" rel="external">http://getbootstrap.com/（英文版）</a><br>1、bootstrap.min.css<br><br>2、jquery.min.js（jquery要提前引入，bootstrap.min.js代码的作用是所有的jquery插件）<br><br>3、bootstrap.min.js<br><br><h4>bootstrap基本模板</h4><br><br>    &lt;!DOCTYPE html&gt;<br>    <html lang="zh-CN"><br>      <head><br>    <meta charset="utf-8"><br>    <meta http-equiv="X-UA-Compatible" content="IE=edge"><br>    <meta name="viewport" content="width=device-width, initial-scale=1"><br>    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --><br>    <title>Bootstrap</title><br>    <!-- Bootstrap --><br>    <link href="css/bootstrap.min.css" rel="stylesheet"><br><br>    <!--[if lt IE 9]> IE9以下的兼容html5标签及响应式布局
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--><br><br>      </head><br>      <body><br>    <script src="js/jquery.min.js"></script><br>    <script src="js/bootstrap.min.js"></script><br>      </body><br>    </html><br><br><br><h4>bootstrap基本命令
 
-&lt;!--[if lt IE 9]&gt; IE9以下的兼容html5标签及响应式布局
-  &lt;script src=&quot;//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;//cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;
+<pre><code>&lt;div class=&quot;h1&quot;&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/div&gt;  &lt;!-- h1-h6样式用class引入 --&gt;
+  &lt;a href=&quot;&quot;&gt;百度&lt;/a&gt; &lt;!-- a标签去除下划线，添加颜色鼠标移入下划线显示 --&gt;
+  &lt;!-- text-muted：提示，使用浅灰色（#999）
+text-primary：主要，使用蓝色（#428bca）
+text-success：成功，使用浅绿色(#3c763d)
+text-info：通知信息，使用浅蓝色（#31708f）
+text-warning：警告，使用黄色（#8a6d3b）
+text-danger：危险，使用褐色（#a94442） --&gt;
 
-  &lt;/head&gt;
-  &lt;body&gt;
-&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p></p><h3>bootstrap基本命令</h3><br>    <div class="h1">你好，世界！<small>this is first bootstrap class</small></div>  <!-- h1-h6样式用class引入 --><br>      <a href="">百度</a> <!-- a标签去除下划线，添加颜色鼠标移入下划线显示 --><br>      <!-- text-muted：提示，使用浅灰色（#999）
-    text-primary：主要，使用蓝色（#428bca）
-    text-success：成功，使用浅绿色(#3c763d)
-    text-info：通知信息，使用浅蓝色（#31708f）
-    text-warning：警告，使用黄色（#8a6d3b）
-    text-danger：危险，使用褐色（#a94442） --><p></p>
-<pre><code>&lt;h1 text-muted&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/h1&gt;
+&lt;h1 text-muted&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/h1&gt;
 &lt;small&gt;this is first bootstrap class&lt;/small&gt;
 &lt;h2 class=&quot;text-primary&quot;&gt;你好，世界！&lt;/h2&gt;
 &lt;h3 class=&quot;text-success&quot;&gt;你好，世界！&lt;/h3&gt;
@@ -388,7 +370,7 @@ text-justify：两端对齐 就是文本较长时到头自动换行下来 --&gt;
   &lt;dt&gt;我是定义列表标题&lt;/dt&gt;
   &lt;dd&gt;我是定义列表阐述&lt;/dd&gt;
 &lt;/dl&gt;
-</code></pre>
+</code></pre></h4>
           
         
       
@@ -450,7 +432,7 @@ text-justify：两端对齐 就是文本较长时到头自动换行下来 --&gt;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-16T20:34:11+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -590,7 +572,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-13T15:03:19+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -696,7 +678,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-12T19:41:35+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -895,7 +877,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:43:58+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1018,7 +1000,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T14:46:44+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1133,7 +1115,7 @@ color: purple;
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1218,7 +1200,7 @@ color: purple;
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
