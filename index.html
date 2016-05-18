@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -233,6 +233,106 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/18/bootstrap的图片图标及表格/" itemprop="url">
+                  bootstrap的图片图标及表格
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T21:07:00+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/18/bootstrap的图片图标及表格/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/18/bootstrap的图片图标及表格/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/18/bootstrap的简要介绍/" itemprop="url">
                   bootstrap的简要介绍
                 </a>
@@ -246,7 +346,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-18T19:47:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -283,123 +383,13 @@
 
       
         
-          
-            <p></p><h3>bootstrap安装</h3><br>bootstrap网址：<a href="http://v3.bootcss.com/（中文版）" target="_blank" rel="external">http://v3.bootcss.com/（中文版）</a><br>bootstrap网址：<a href="http://getbootstrap.com/（英文版）" target="_blank" rel="external">http://getbootstrap.com/（英文版）</a><br>1、bootstrap.min.css<p></p>
-<p>2、jquery.min.js（jquery要提前引入，bootstrap.min.js代码的作用是所有的jquery插件）</p>
-<p>3、bootstrap.min.js</p>
-<h4>bootstrap基本模板</h4>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;
-&lt;title&gt;Bootstrap&lt;/title&gt;
-&lt;!-- Bootstrap --&gt;
-&lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-
-&lt;!--[if lt IE 9]&gt; IE9以下的兼容html5标签及响应式布局
-&lt;script src=&quot;//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;//cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h4>bootstrap基本命令</h4>
-
-<pre><code>&lt;div class=&quot;h1&quot;&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/div&gt;  &lt;!-- h1-h6样式用class引入 --&gt;
-  &lt;a href=&quot;&quot;&gt;百度&lt;/a&gt; &lt;!-- a标签去除下划线，添加颜色鼠标移入下划线显示 --&gt;
-  &lt;!-- text-muted：提示，使用浅灰色（#999）
-text-primary：主要，使用蓝色（#428bca）
-text-success：成功，使用浅绿色(#3c763d)
-text-info：通知信息，使用浅蓝色（#31708f）
-text-warning：警告，使用黄色（#8a6d3b）
-text-danger：危险，使用褐色（#a94442） --&gt;
-
-  (固定不同级别标题字体大小，h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px;)
-  (重新设置了margin-top和margin-bottom的值，  h1~h3重置后的值都是20px；h4~h6重置后的值都是10px)
-
-&lt;h1 text-muted&gt;你好，世界！&lt;small&gt;this is first bootstrap class&lt;/small&gt;&lt;/h1&gt;
-&lt;small&gt;this is first bootstrap class&lt;/small&gt;
-&lt;h2 class=&quot;text-primary&quot;&gt;你好，世界！&lt;/h2&gt;
-&lt;h3 class=&quot;text-success&quot;&gt;你好，世界！&lt;/h3&gt;
-&lt;h4 class=&quot;text-info&quot;&gt;你好，世界！&lt;/h4&gt;
-&lt;h5 class=&quot;text-warning&quot;&gt;你好，世界！&lt;/h5&gt;
-&lt;h6 class=&quot;text-danger&quot; &gt;你好，世界！&lt;/h6&gt;
-
-&lt;p class=&quot;lead&quot;&gt;&lt;strong&gt;我是p标签&lt;/strong&gt;&lt;/p&gt;（lead使得p标签的文本内容加粗字体变大）
-&lt;!-- text-left：左对齐
-text-center：居中对齐
-text-right：右对齐
-text-justify：两端对齐 就是文本较长时到头自动换行下来 --&gt;
-&lt;p class=&quot;text-left&quot;&gt;我是p标签我是p我是p标签我是p标签&lt;/p&gt;
-&lt;p class=&quot;text-center&quot;&gt;签我是p标签我是p标签我是p标标&lt;/p&gt;
-&lt;p class=&quot;text-right&quot;&gt;是p标签我是p标签标签我是p标&lt;/p&gt;
-&lt;p class=&quot;text-justify&quot;&gt;我是我是pp标签标签我是p标签我是p标签&lt;/p&gt;
-
-&lt;!-- 强调的加粗效果 --&gt;
-&lt;strong&gt;&lt;/strong&gt;
-&lt;!-- &lt;b&gt;&lt;/b&gt;要废弃 --&gt;
-&lt;!-- 斜体 --&gt;
-&lt;em&gt;&lt;/em&gt;
-&lt;cite&gt;hello world&lt;/cite&gt;
-&lt;i&gt;&lt;/i&gt;
-&lt;var&gt;&lt;/var&gt;
-&lt;!-- 字体大小标签 --&gt;
-&lt;small&gt;&lt;/small&gt; &lt;!-- 配合标题做副标题用 --&gt;
-&lt;!-- cite --&gt;
-&lt;blockquote&gt;hello world&lt;/blockquote&gt;
-
-&lt;code&gt;    （内容带有4px圆角带颜色背景，字体也有颜色）ps：code一般是针对于单个单词或单个句子的代码；
-  div标签是一个块级标签，使用方法&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
-  (不管使用哪种代码风格，在代码中碰到小于号（&lt;）要使用硬编码“&amp;lt;”来替代，大于号(&gt;)使用“&amp;gt;”来替代)
-&lt;/code&gt;
-
-只需要在pre标签上添加类名“.pre-scrollable”，就可以控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条。
-&lt;pre class=&quot;pre-scrollable&quot;&gt;
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-  function(){
-    console.log(&apos;haha&apos;)
-  }
-&lt;/pre&gt;
-
- &lt;!-- 列表标签 --&gt;
-&lt;ul class=&quot;list-unstyled list-inline&quot;&gt;（list-unstyled消除ul的自带属性，list-inline所有li一排显示）
-  &lt;li&gt;我是无序列表&lt;/li&gt;
-  &lt;li&gt;我是无序列表&lt;/li&gt;
-  &lt;li&gt;我是无序列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol class=&quot;list-unstyled list-inline&quot;&gt;
-  &lt;li&gt;我是有序列表&lt;/li&gt;
-  &lt;li&gt;我是有序列表&lt;/li&gt;
-  &lt;li&gt;我是有序列表&lt;/li&gt;
-&lt;/ol&gt;
-&lt;dl class=&quot;dl-horizontal&quot;&gt;  （dl-horizontal屏幕大于768才生效，即才能在一排显示 ）
-  &lt;dt&gt;我是定义列表标题&lt;/dt&gt;
-  &lt;dd&gt;我是定义列表阐述&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
-          
+          <p><h3>bootstrap安装</h3><br>bootstrap网址：<a href="http://v3.bootcss.com/（中文版）">http://v3.bootcss.com/（中文版）</a></p>
+<p>bootstrap网址：<a href="http://getbootstrap.com/（英文版）">http://getbootstrap.com/（英文版）</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/18/bootstrap的简要介绍/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -460,7 +450,7 @@ text-justify：两端对齐 就是文本较长时到头自动换行下来 --&gt;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-16T20:34:11+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -600,7 +590,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-13T15:03:19+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -706,7 +696,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-12T19:41:35+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -905,7 +895,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:43:58+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1028,7 +1018,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-11T14:46:44+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1142,8 +1132,8 @@ color: purple;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -1228,7 +1218,7 @@ color: purple;
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
