@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -246,7 +246,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T21:07:00+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -346,7 +346,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T19:47:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -387,7 +387,7 @@
 <p>bootstrap网址：<a href="http://getbootstrap.com/（英文版）">http://getbootstrap.com/（英文版）</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/18/bootstrap的简要介绍/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -450,7 +450,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-16T20:34:11+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -487,49 +487,13 @@
 
       
         
-          
-            <p></p><h3>搭建gulp</h3><br>gulp网址：<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">http://www.gulpjs.com.cn/</a><p></p>
-<p>gulp插件网址：<a href="http://gulpjs.com/plugins/" target="_blank" rel="external">http://gulpjs.com/plugins/</a></p>
-<p>1.创建项目文件夹  - -&gt;安装gulp文件  sudo npm install –global gulp（sudo是为了获取权限）</p>
-<p>2.项目初始化           - -&gt;在gulp下 npm init</p>
-<p>3.npm install –save-dev gulp  作为项目的开发依赖（devDependencies）安装</p>
-<p>4.配置gulp插件 npm install –save-dev gulp-concat或者 npm install gulp-concat –save-dev</p>
-<p>配置 gulpfile.js</p>
-<pre><code>var gulp = require(&apos;gulp&apos;);
-var concat = require(&apos;gulp-concat&apos;);
-var jsmin =require(&apos;gulp-jsmin&apos;);
-gulp.task(&apos;kangkang&apos;,function(){
-return gulp.src(&apos;js/*.js’)    //获取js文件夹下的所有js文件路径相对于gulpfile.js来的  {gulp.src() 目标文件}
-.pipe(concat(&apos;new.js&apos;))     //所有js文件合并成一个新的名为new.js的文件中  {gulp-concat 合并文件}
-.pipe(jsmin())     //将js文件压缩（ps:这一步要在合并完成之后再进行） {pipe() 管道，上面的输出就是下面的输入}
-.pipe(gulp.dest(&apos;newJS/&apos;))     //新文件的存放位置即新的文件夹 {gulp.dest 目标输出}
-})
-</code></pre><p>gulp.task()3个参数 1.任务名 2.任务依赖3.回调</p>
-<p>任务名即kangkang，直接在终端（gulp）里gulp kangkang；</p>
-<p>gulp.task(‘default’,[‘a’,’b’],function(){ console.log(‘haha’)});<br>gulp.task(‘a’,function(){ console.log(‘a’)})<br>gulp.task(‘b’,function(){console.log(‘b’)})</p>
-<p>[‘a’,’b’]即任务依赖，ab需要按照顺序来执行，且default最后执行；</p>
-<p>回调，即function函数；</p>
-<p>ulp-jsmin js文件压缩<br>gulp-cssmin css文件压缩<br>gulp-htmlmin html文件压缩</p>
-<p></p><h3>gulp文件到线上</h3><br>1、在gulp下新建文件夹html  2、html下新建四个文件夹<p></p>
-<p>1、desk—&gt;html,css,js     最后压缩好放在线上的文件夹</p>
-<p>2、public—&gt;js     公共用的第三方插件库，jquery等</p>
-<p>3、src—&gt;css,js     原生的css,js文件</p>
-<p>4、views—&gt;html文件     所有的html文件</p>
-<p>5、html里新建gulpfile.js、package.json、README.md文件</p>
-<p>6、在gulp文件下里进行配置jade等文件， npm install gulp-jade –save-dev</p>
-<p>gulpfile.js代码</p>
-<pre><code>var gulp = require(&apos;gulp&apos;);
-var concat = require(&apos;gulp-concat&apos;);
-var jade = require(&apos;gulp-jade&apos;);
-
-gulp.task(&apos;kang&apos;,function(){
-return gulp.src(&apos;views/*.jade&apos;)
-.pipe(concat(&apos;index.html&apos;))
-.pipe(gulp.dest(&apos;desk/html/&apos;))
-})
-</code></pre><p>终端在html中输入gulp kang</p>
-
-          
+          <p><h3>搭建gulp</h3><br>gulp网址：<a href="http://www.gulpjs.com.cn/">http://www.gulpjs.com.cn/</a></p>
+<p>gulp插件网址：<a href="http://gulpjs.com/plugins/">http://gulpjs.com/plugins/</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/16/gulp的构建/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -590,7 +554,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-13T15:03:19+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -696,7 +660,7 @@ return gulp.src(&apos;views/*.jade&apos;)
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-12T19:41:35+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -733,108 +697,12 @@ return gulp.src(&apos;views/*.jade&apos;)
 
       
         
-          
-            <h3 id="布局样式-中间固定宽度，两边自适应；"><a href="#布局样式-中间固定宽度，两边自适应；" class="headerlink" title="布局样式:中间固定宽度，两边自适应；"></a>布局样式:中间固定宽度，两边自适应；</h3><p>下面是小布局：</p>
-<pre><code>&lt;div class=&quot;box&quot;&gt;
-    &lt;div class=&quot;div1&quot;&gt;
-        &lt;img src=&quot;logo.png&quot; alt=&quot;&quot;&gt;
-        &lt;ul&gt;
-            &lt;li&gt;1&lt;/li&gt;
-            &lt;li&gt;2&lt;/li&gt;
-            &lt;li&gt;3&lt;/li&gt;
-            &lt;li&gt;4&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><p>CSS样式：</p>
-<pre><code>.box{
-        width: 100%;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        overflow: hidden;
-    }
-    .div1{
-        margin: 0 auto;
-        width:875px;
-        height: 75px;
-    }
-    .div1 img{
-        height: 75px;
-        float: left;
-    }
-    ul{
-        width: 800px;
-        height: 75px;
-        overflow: hidden;
-        float: left;
-    }
-    ul li{
-        width: 200px;
-        height: 75px;
-        float: left;
-        background-color: blue;
-    }
-    .div1::before{
-        content: &apos;&apos;;
-        width: 100%;
-        height: 75px;
-        margin-left: -100%;
-        background: red;
-        display: block;
-        float: left;
-    }
-    .div1::after{
-        content: &apos;&apos;;
-        width: 100%;
-        height: 75px;
-        margin-right: -100%;
-        background: red;
-        display: block;
-        float: left;
-    }
-</code></pre><p>###伪类的五个种类：</p>
-<p>/<em>div1内容或标签之前的伪类样式</em>/</p>
-<pre><code>  .div1::before{
-content: &apos;我是before&apos;;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-display: block;
-background-color: blue;
-color: white;
-}
-</code></pre><p>/<em>div1之后的伪类样式</em>/</p>
-<pre><code>.div1::after{
-content: &apos;我是after&apos;;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-display: block;
-background-color: blue;
-color: white;
-}
-</code></pre><p>/<em>第一行内容样式改变</em>/</p>
-<pre><code>.div1::first-line{
-content: &apos;&apos;;
-display: block;
-/*background-color: blue;*/
-color: blue;
-}
-</code></pre><p>/<em>第一个字符样式发生改变</em>/</p>
-<pre><code>.div1::first-letter{
-content: &apos;&apos;;
-display: block;
-background-color: blue;
-color: pink;
-}
-</code></pre><p>/<em>选择的部分样式发生改变</em>/</p>
-<pre><code>::selection{
-background: yellow;
-color: purple;
-};
-</code></pre>
-          
+          <h3 id="布局样式-中间固定宽度，两边自适应；"><a href="#布局样式-中间固定宽度，两边自适应；" class="headerlink" title="布局样式:中间固定宽度，两边自适应；"></a>布局样式:中间固定宽度，两边自适应；</h3>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/12/伪类布局小技巧/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -895,7 +763,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:43:58+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1018,7 +886,7 @@ color: purple;
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T14:46:44+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1133,7 +1001,7 @@ color: purple;
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1218,7 +1086,7 @@ color: purple;
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
