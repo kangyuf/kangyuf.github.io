@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -246,7 +246,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-21T16:56:45+08:00" content="2016-05-21">
               2016-05-21
             </time>
@@ -283,71 +283,13 @@
 
       
         
-          
-            <p></p><h3>bootstrap的栅格结构</h3><p></p>
-<p></p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br>根据浏览器屏幕的划分：<p></p>
-<table>
-<thead>
-<tr>
-<th>浏览器屏幕大小：</th>
-<th>超小屏幕(手机) (&lt;768px)</th>
-<th>小屏幕(平板) (≥768px)</th>
-<th>中等屏幕 桌面显示器 (≥992px)</th>
-<th>大屏幕 大桌面显示器 (≥1200px)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>栅格系统行为</td>
-<td>总是水平排列（只有小于768px）</td>
-<td>开始是堆叠在一起的，当大于这些阈值时将变为水平排列C （后面三列适用）</td>
-</tr>
-<tr>
-<td>.container 最大宽度</td>
-<td>None （自动）</td>
-<td>750px</td>
-<td>970px</td>
-<td>1170px</td>
-</tr>
-<tr>
-<td>类前缀</td>
-<td>.col-xs-</td>
-<td>.col-sm-</td>
-<td>.col-md-</td>
-<td>.col-lg-</td>
-</tr>
-</tbody>
-</table>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;ul class=&quot;row list-unstyled&quot;&gt;  
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;1&lt;/li&gt;
-            &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;2&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;3&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;4&lt;/li&gt;
-      &lt;/ul&gt;
-&lt;/div&gt;
-代码运行的结果是：当screen≥1200px,显示为一行四列；当screen≥992px,显示为两行两列；
-                当screen≥768px,显示为一行四列；当screen＜768px,显示为两行两列；
-                ps：当前写的栅格结构是大于所规定的值之后才显示所写结构的样式；
-</code></pre><p></p><h4>列偏移</h4><br>使用 .col-md-offset-<em> 类可以将列向右侧偏移。这些类实际是通过使用 </em> 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。<p></p>
-<p></p><h4>嵌套列</h4><br>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。<p></p>
-<pre><code>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-9&quot;&gt;
-    Level 1: .col-sm-9
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
-        Level 2: .col-xs-8 .col-sm-6
-      &lt;/div&gt;
-      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
-        Level 2: .col-xs-4 .col-sm-6
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-Level 1: .col-sm-9        作为父级存在
-Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
-</code></pre>
-          
+          <p><h3>bootstrap的栅格结构</h3></p>
+<p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/21/bootstrap栅格结构/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -408,7 +350,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T22:07:47+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -508,7 +450,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T21:07:00+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -548,7 +490,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <p><h3>图片和图标</h3><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/18/bootstrap的图片图标及表格/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -611,7 +553,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T19:47:50+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -652,7 +594,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 <p>bootstrap网址：<a href="http://getbootstrap.com/（英文版）">http://getbootstrap.com/（英文版）</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/18/bootstrap的简要介绍/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -715,7 +657,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-16T20:34:11+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -756,7 +698,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 <p>gulp插件网址：<a href="http://gulpjs.com/plugins/">http://gulpjs.com/plugins/</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/16/gulp的构建/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -819,7 +761,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-13T15:03:19+08:00" content="2016-05-13">
               2016-05-13
             </time>
@@ -859,7 +801,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <p><h3>上传的步骤：</h3><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/13/本地文件上传到github/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -922,7 +864,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-12T19:41:35+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -962,7 +904,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <h3 id="布局样式-中间固定宽度，两边自适应；"><a href="#布局样式-中间固定宽度，两边自适应；" class="headerlink" title="布局样式:中间固定宽度，两边自适应；"></a>布局样式:中间固定宽度，两边自适应；</h3>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/12/伪类布局小技巧/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1025,7 +967,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:43:58+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1065,7 +1007,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <p><h3>博客的安装和使用</h3><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/11/我的第二个博客/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1128,7 +1070,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T14:46:44+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1168,7 +1110,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <p><h3>欢迎来到我的博客</h3><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/11/我的第一个博客/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1239,7 +1181,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">9</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1324,7 +1266,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
