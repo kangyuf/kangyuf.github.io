@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/24/流氓面试题/index.html">
 <meta property="og:site_name" content="小康的博客">
 <meta property="og:description" content="心机面试官出流氓面试题，清纯面试者做到怀疑人生–题记">
-<meta property="og:updated_time" content="2016-05-24T11:48:06.000Z">
+<meta property="og:updated_time" content="2016-05-24T12:22:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流氓面试题">
 <meta name="twitter:description" content="心机面试官出流氓面试题，清纯面试者做到怀疑人生–题记">
@@ -482,6 +482,17 @@ A、1
 B、2 
 C、Error (e.g. “Too much recursion”) 
 D、undefined
+答案：B
+</code></pre><p>13</p>
+<pre><code>function f() {
+return f;
+}
+new f() instanceof f;
+
+console.log(new f() instanceof f)//false  return f 是一个死循环
+如果return f 变成return &apos;f&apos;或者1等等,就是true; //此时f是一个函数，new f() 就是衍生出来的它的子类，就是true;
+A、true 
+B、false
 答案：B
 </code></pre>
       
