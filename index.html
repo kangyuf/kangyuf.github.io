@@ -233,6 +233,179 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/29/面向对象和原型/" itemprop="url">
+                  面向对象和原型
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-02-29T20:42:16+08:00" content="2016-02-29">
+              2016-02-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/29/面向对象和原型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/29/面向对象和原型/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p></p><h4>面向对象</h4><br><!--!more--><p></p>
+<p>JS中的对象</p>
+<p>对象是键值对的结合，也可以叫做无序属性的集合，其属性可以包括基本值、函数、对象。每个属性都会有一个名字，每个名字映射到一个值上下面是创建一个对象的一些方法</p>
+<p>面向对象的特点：封装，继承，多态。JS中面向对象的组成：</p>
+<p>1.方法（函数）：过程，动态的</p>
+<p>2.属性（有所属关系的变量）：状态，静态的</p>
+<h5>创建对象</h5>
+
+<p>1.普通对象</p>
+<pre><code>创建一个对象,然后给这个对象新建属性和方法：
+var box = new Object();              // 创建一个Object对象;
+ box.name = &apos;lee&apos;;                    // 创建一个name属性并赋值;
+ box.age = 100;
+box.run = function(){                // 创建一个run()方法并返回值;
+       return this.name+this.age+&apos;运行中...&apos;;
+ } 
+console.log(box.run());              // 输入属性和方法的值;
+</code></pre><p>2.工厂模式</p>
+<pre><code>这种方法就是为了解决实例化对象产生大量代码重复的问题：
+function createObject(name,age){        // 集中创建函数体;
+ var obj = new Object;         // 函数体内创建Object;
+ obj.name = name; 
+ obj.age = age;
+ obj.run = function(){
+     return this.name+this.age+&quot;运行中...&quot;;
+ };
+ return obj;
+}
+var box1 = createObject(&quot;lee&quot;,100);     // 实例化;调用函数并传参;
+var box2 = createObject(&quot;jack&quot;,200);    // 实例二;
+console.log(box1.run()+box2.run());     // 实例保持相对独立;
+缺点:对象与实例的识别问题;无法搞清楚它们到底是那个对象的实例;
+console.log(typeof box1);               // Object;
+</code></pre><p>3.构造函数</p>
+<p>ECMAScript 中可以采用构造函数(构造方法)可用来创建特定的对象：</p>
+<pre><code>function Box(name,age){          // 构造函数模式;
+    this.name = name;           // this代表对象Box;
+    this.age = age;
+    this.run = function(){
+        return this.name+this.age+&quot;运行中...&quot;;
+    };
+}
+var box1 = new Box(&quot;lee&quot;,100);         // 要创建对象的实例必须用new操作符;
+var box2 = new Box(&quot;jack&quot;,200);        // box1和box2都是Box对象的实例;
+console.log(box1 instanceof Box);      // true;很清晰的识别box1从属于Box;
+</code></pre><p>使用构造函数的方法,即解决了重复实例化的问题,又解决了对象识别的问题,但问题是,这里并没有 new Object(),为什么可以实例化 Box(),这个是哪里来的呢?</p>
+<p>使用了构造函数的方法,和使用工厂模式的方法他们不同之处如下:</p>
+<p>1.构造函数方法没有显示的创建对象(new Object());</p>
+<p>2.直接将属性和方法赋值给 this 对象;</p>
+<p>3.没有 renturn 语句。</p>
+<p>构造函数的方法有一些规范:</p>
+<p>1.函数名和实例化构造名相同且大写,(PS:非强制,但这么写有助于区分构造函数和 普通函数);</p>
+<p>2.通过构造函数创建对象,必须使用 new 运算符。</p>
+<p>既然通过构造函数可以创建对象,那么这个对象是哪里来的,new Object()在什么地方 执行了?执行的过程如下:</p>
+<p>1.当使用了构造函数,并且 new 构造函数(),那么就后台执行了 new Object();</p>
+<p>2.将构造函数的作用域给新对象,(即 new Object()创建出的对象),而函数体内的 this 就 代表 new Object()出来的对象。</p>
+<p>3.执行构造函数内的代码;</p>
+<p>4.返回新对象(后台直接返回)。</p>
+<p></p><h4>原型</h4><br>原型是函数所具有的一种属性这个属性是一个指针（地址），指向一个对象而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。<p></p>
+<p>用途:包含可以由特定类型的所有实例共享的属性和方法;</p>
+<p>理解: prototype是通过调用构造函数创建的那个对象的原型对象;</p>
+<p>使用原型的好处是可以让所有对象实例共享它所包含的属性和方法;</p>
+<p>也就是说, 不必在构造函数中定义对象信息(属性/方法),而是可以直接将这些信息添加到原型中;</p>
+<p>原型模式的执行流程:</p>
+<p>1.先查找构造函数对象的实例里的属性或方法,若有,立刻返回;</p>
+<p>2.若构造函数对象的实例里没有,则去它的原型对象里找,若有,就返回;</p>
+<p>虽然我们可以通过对象实例访问保存在原型中的值,但却不能访问通过对象实例重写原型中的值;</p>
+<p></p><h4>1.原型模式</h4><br>    function Box(){}                                // 声明构造函数;<br>    Box.prototype.name = ‘Lee’;                     // 在原型里添加属性和方法;<br>    Box.prototype.age = 100;<br>    Box.prototype.run = function() {<br>        return this.name+this.age+’运行中…’;<br>    };<br>    var box1 = new Box();<br>    var box2 = new Box();<br>    console.log(box1.run==box2.run);                // =&gt;true;方法引用的地址保持一致;<p></p>
+<p>在原型中多了两个属性,这两个原型属性都是创建对象时自动生成的;</p>
+<p><em> proto </em>:构造函数指向原型对象的一个指针;它的作用:指向构造函数的原型的属性constructor;</p>
+<p></p><h4>2.原型的字面量模式</h4><br>    function Box(){};<br>    Box.prototype = {             // 以字面量形式创建包含属性和方法的新对象;<br>        name:’Lee’,<br>        age:100,<br>        run:function(){<br>            return this.name+this.age+’运行中…’;<br>        }<br>    };<p></p>
+<p>使用构造函数创建原型对象和使用字面量创建原型对象在使用上基本相同;</p>
+<p>但是,使用字面量创建的原型对象使用constructor属性不会指向实例,而是指向原型对象Object;构造函数的方式则相反;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/05/canvas基础/" itemprop="url">
                   canvas基础
                 </a>
@@ -1142,109 +1315,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/15/本地文件上传到github/" itemprop="url">
-                  本地文件上传到github
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-07-15T19:03:19+08:00" content="2015-07-15">
-              2015-07-15
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/15/本地文件上传到github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/15/本地文件上传到github/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><h3>上传的步骤：</h3><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/15/本地文件上传到github/#more" rel="contents">
-              Weiterlesen &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1290,7 +1360,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
