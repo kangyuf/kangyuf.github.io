@@ -1,0 +1,833 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://ww3.sinaimg.cn/large/aca3b6cdgw1f3u5ox2nfrj202802idfn.jpg?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="JS中typeof与instanceof的区别JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。但它们之间还是有区别的：
+typeof：typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。它返回值是一个字符串，该字符串说明运算数的类型。typeof 一般只能返回如下几个结果：number,boolean,strin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这很面试题">
+<meta property="og:url" content="http://yoursite.com/2015/11/24/流氓面试题/index.html">
+<meta property="og:site_name" content="小康的博客">
+<meta property="og:description" content="JS中typeof与instanceof的区别JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。但它们之间还是有区别的：
+typeof：typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。它返回值是一个字符串，该字符串说明运算数的类型。typeof 一般只能返回如下几个结果：number,boolean,strin">
+<meta property="og:updated_time" content="2016-07-29T12:22:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="这很面试题">
+<meta name="twitter:description" content="JS中typeof与instanceof的区别JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。但它们之间还是有区别的：
+typeof：typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。它返回值是一个字符串，该字符串说明运算数的类型。typeof 一般只能返回如下几个结果：number,boolean,strin">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6283622548169033000,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 这很面试题 | 小康的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小康的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我是程序员；您好程先生；叫我序员就好了；</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                这很面试题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2015-11-24T21:18:03+08:00" content="2015-11-24">
+              2015-11-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/24/流氓面试题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/流氓面试题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<p></p><h4>JS中typeof与instanceof的区别</h4><br>JavaScript 中 typeof 和 instanceof 常用来判断一个变量是否为空，或者是什么类型的。但它们之间还是有区别的：<p></p>
+<p>typeof：typeof 是一个一元运算，放在一个运算数之前，运算数可以是任意类型。<br><code>它返回值是一个字符串，该字符串说明运算数的类型。</code>typeof 一般只能返回如下几个结果：<br>number,boolean,string,function,object,undefined。我们可以使用 typeof 来获取一个变量是否存在，如 if(typeof a!=”undefined”){alert(“ok”)}，而不要去使用 if(a) 因为如果 a 不存在（未声明）则会出错，<code>对于 Array,Null 等特殊对象使用 typeof 一律返回 object，这正是 typeof 的局限性。</code></p>
+<p>instanceof的语法结构：<code>a instanceof b ，其中a是要判断的变量，b是数据的基本类型；</code></p>
+<p>a instanceof b?alert(“true”):alert(“false”); //a是b的实例？真:假<br>instanceof 用于判断一个变量是否某个对象的实例，如 var a=new Array();alert(a instanceof Array); 会返回 true，同时 alert(a instanceof Object) 也会返回 true;这是因为 Array 是 object 的子类。再如：function test(){};var a=new test();alert(a instanceof test) 会返回true;</p>
+<p>谈到 instanceof 我们要多插入一个问题，就是 function 的 arguments，我们大家也许都认为 arguments 是一个 Array，但如果使用 instaceof 去测试会发现 arguments 不是一个 Array 对象，尽管看起来很像。</p>
+<p>测试 var a=new Array();if (a instanceof Object) alert(‘Y’);else alert(‘N’);得’Y’</p>
+<p>但 if (window instanceof Object) alert(‘Y’);else alert(‘N’);得’N’</p>
+<p>所以，这里的 instanceof 测试的 object 是指 js 语法中的 object，不是指 dom 模型对象。</p>
+<p>使用 typeof 会有些区别 alert(typeof(window)) 会得 object。</p>
+<p>面试题：</p>
+<p>01</p>
+<pre><code>(function () {  //arruments是对象
+return typeof arguments;  
+})();  
+A. &quot;object&quot;
+B. &quot;array&quot;
+C. &quot;arguments&quot;
+D. &quot;undefined&quot;
+答案：A
+</code></pre><p>02</p>
+<pre><code>var f = function g() {    //没有这种写法
+    return 23;
+};
+typeof g();
+A. &quot;number&quot;
+B. &quot;undefined&quot;
+C. &quot;function&quot;
+D. Eorror
+答案：D
+</code></pre><p>03</p>
+<pre><code>(function (x) {
+delete x;    //delete可以删除对象的属性,删除不了变量,函数 
+return x;
+})(1);
+A. 1
+B. null
+C. undefined
+D. Error
+答案：A
+</code></pre><p>04</p>
+<pre><code>var y = 1,
+x = y = typeof x;    
+x;    //要把浏览器页面关闭再打开，要不会出现干扰
+
+typeof打印出来的console不带&quot;&quot;，实际上typeof的输出值是字符串形象，如&quot;number&quot;,&quot;undefined&quot;
+A. 1
+B. &quot;number&quot;
+C. undefined
+D. &quot;undefined&quot; 
+答案： D
+</code></pre><p>05</p>
+<pre><code>(function f(f) {
+return typeof f();
+})(function () {
+return 1;
+});
+
+理解：
+(function f(f){
+console.log(typeof f()) //这里的f()实际上就是调用了下面的匿名函数
+})(function(){return 1});//这里的function作为整体看就是(f)里地f，当参数传入
+
+A. &quot;number&quot;
+B. &quot;undefined&quot;
+C. &quot;function&quot;    
+D. Error
+答案：A
+</code></pre><p>06</p>
+<pre><code>var foo = {
+bar: function () {
+    return this.baz;
+},
+baz: 1
+};
+(function () {
+return typeof arguments[0]();
+})(foo.bar);
+
+理解：
+var foo = {
+bar: function () {
+     return this.baz;
+    console.log(this.baz) ;    //此时返回的时undefined
+},
+baz: 1
+};
+
+console.log(foo.bar())//foo.barfunction函数加()可以读取到1
+console.log((foo.bar)());和上面等同
+console.log(foo.baz)    //在外部才可以读取1
+
+(function () {
+return typeof arguments[0]();
+})(foo.bar) 
+
+A. &quot;undefined&quot;
+B. &quot;object&quot;
+C. &quot;number&quot;
+D. &quot;function&quot;
+答案：A
+</code></pre><p>07</p>
+<pre><code>var foo = {
+bar: function () {
+    return this.baz;
+},
+baz: 1
+};
+typeof (f=foo.bar)();
+
+理解：
+var foo = {
+bar: function () {
+    return this.baz;
+},
+baz: 1
+};
+
+f=foo.bar();
+console.log(f)//得到1
+f=foo.bar;
+console.log(f())//undefined
+
+console.log(typeof (f=foo.bar)() )//输出结果undefined
+console.log(typeof(f=foo.bar()))//输出结果是number
+
+A. &quot;undefined&quot;
+B. &quot;object&quot;
+C. &quot;number&quot;
+D. &quot;function&quot;
+答案：A
+</code></pre><p>08</p>
+<pre><code>var f = (function f() {
+return &quot;1&quot;;
+}, function g() {
+return 2;
+})();
+
+理解：    //后面的把前面的覆盖掉了
+var f = 
+console.log(typeof (function f() {
+return &quot;1&quot;;
+})())    
+console.log(typeof (function g() {
+return 2;
+})())
+typeof f;
+A. &quot;string&quot;
+B. &quot;number&quot;
+C. &quot;function&quot;
+D. &quot;undefined&quot;
+答案： B
+</code></pre><p>09</p>
+<pre><code>var x = 1;
+if (function f() {}) {
+x += typeof f;
+}
+x;
+A. 1
+B. &quot;1function&quot;    
+C. &quot;1undefined&quot;    //if中的参数只作为判断条件；
+D. NaN
+答案： C
+</code></pre><p>10</p>
+<pre><code>var x = [typeof x, typeof y][1];
+typeof typeof x;
+A. &quot;number&quot;
+B. &quot;string&quot;    //typeof x是字符串所以就是字符串
+C. &quot;undefined&quot;
+D. &quot;object&quot;
+答案： B
+</code></pre><p>11</p>
+<pre><code>(function (foo) {
+return typeof foo.bar;
+})({
+foo: {
+    bar: 1
+}
+});
+
+理解：
+(function (f) {
+return typeof f.foo.bar;
+})(f={foo: { bar: 1}});
+
+A、“undefined” 
+B、“object” 
+C、“number” 
+D、Error
+答案： A
+</code></pre><p>12</p>
+<pre><code>(function f() {
+function f() {
+    return 1;
+}
+return f();
+function f() {    //第一公民优先解析漂到js最上面
+    return 2;
+}
+})();
+A、1 
+B、2 
+C、Error (e.g. “Too much recursion”) 
+D、undefined
+答案：B
+</code></pre><p>13</p>
+<pre><code>function f() {
+return f;
+}
+new f() instanceof f;
+
+console.log(new f() instanceof f)//false  return f 是一个死循环
+如果return f 变成return &apos;f&apos;或者1等等,就是true; //此时f是一个函数，new f() 就是衍生出来的它的子类，就是true;
+A、true 
+B、false
+答案：B
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/11/常用的正则表达式/" rel="next" title="常用的正则表达式">
+                <i class="fa fa-chevron-left"></i> 常用的正则表达式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/18/bootstrap的简要介绍/" rel="prev" title="bootstrap的简要介绍">
+                bootstrap的简要介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/11/24/流氓面试题/"
+           data-title="这很面试题" data-url="http://yoursite.com/2015/11/24/流氓面试题/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Kelvin" />
+          <p class="site-author-name" itemprop="name">Kelvin</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangjing991.github.io/" title="大boss" target="_blank">大boss</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangbin5614.github.io/" title="王彬" target="_blank">王彬</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://ahz549467483.github.io/" title="陈晨" target="_blank">陈晨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://lanfeng-lgp.github.io/" title="李国平" target="_blank">李国平</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://liushengguang.github.io/" title="刘圣光" target="_blank">刘圣光</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mogugit.github.io/" title="孙帅兵" target="_blank">孙帅兵</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zouqianghtml.github.io/" title="邹强" target="_blank">邹强</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">JS中typeof与instanceof的区别</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kelvin</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"kangyuf"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
