@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="gulp-jade," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="description" content="Jade介绍Jade是一个基于javascript，可以运行于node与浏览器环境的一个前端模板引擎。
+gulp-jade的安装1.先建立一个jade文件夹，然后再终端初始化npm init生成package.json文件2.在nodeJs中输入以下命令npm install gulp-jade –save-dev下载gulp-jade">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap栅格结构">
-<meta property="og:url" content="http://yoursite.com/2015/12/21/bootstrap栅格结构/index.html">
+<meta property="og:title" content="gulp-jade运用">
+<meta property="og:url" content="http://yoursite.com/2016/02/27/gulp-jade运用/index.html">
 <meta property="og:site_name" content="小康的博客">
-<meta property="og:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
-<meta property="og:updated_time" content="2016-07-29T12:23:43.000Z">
+<meta property="og:description" content="Jade介绍Jade是一个基于javascript，可以运行于node与浏览器环境的一个前端模板引擎。
+gulp-jade的安装1.先建立一个jade文件夹，然后再终端初始化npm init生成package.json文件2.在nodeJs中输入以下命令npm install gulp-jade –save-dev下载gulp-jade">
+<meta property="og:updated_time" content="2016-07-29T14:40:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap栅格结构">
-<meta name="twitter:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="twitter:title" content="gulp-jade运用">
+<meta name="twitter:description" content="Jade介绍Jade是一个基于javascript，可以运行于node与浏览器环境的一个前端模板引擎。
+gulp-jade的安装1.先建立一个jade文件夹，然后再终端初始化npm init生成package.json文件2.在nodeJs中输入以下命令npm install gulp-jade –save-dev下载gulp-jade">
 
 
 
@@ -114,7 +114,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
   };
 </script>
 
-  <title> bootstrap栅格结构 | 小康的博客 </title>
+  <title> gulp-jade运用 | 小康的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -234,7 +234,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
             
               
-                bootstrap栅格结构
+                gulp-jade运用
               
             
           </h1>
@@ -246,8 +246,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-21T19:56:45+08:00" content="2015-12-21">
-              2015-12-21
+            <time itemprop="dateCreated" datetime="2016-02-27T22:38:11+08:00" content="2016-02-27">
+              2016-02-27
             </time>
           </span>
 
@@ -257,8 +257,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/21/bootstrap栅格结构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/bootstrap栅格结构/" itemprop="commentsCount"></span>
+                <a href="/2016/02/27/gulp-jade运用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/27/gulp-jade运用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,71 +281,35 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
       
 
       
-        <p></p><h3>bootstrap的栅格结构</h3><p></p>
-<p></p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br><a id="more"></a><br>根据浏览器屏幕的划分：<p></p>
-<table>
-<thead>
-<tr>
-<th>浏览器屏幕大小：</th>
-<th>超小屏幕(手机) (&lt;768px)</th>
-<th>小屏幕(平板) (≥768px)</th>
-<th>中等屏幕 桌面显示器 (≥992px)</th>
-<th>大屏幕 大桌面显示器 (≥1200px)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>栅格系统行为</td>
-<td>总是水平排列（只有小于768px）</td>
-<td>开始是堆叠在一起的，当大于这些阈值时将变为水平排列C （后面三列适用）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>.container 最大宽度</td>
-<td>None （自动）</td>
-<td>750px</td>
-<td>970px</td>
-<td>1170px</td>
-</tr>
-<tr>
-<td>类前缀</td>
-<td>.col-xs-</td>
-<td>.col-sm-</td>
-<td>.col-md-</td>
-<td>.col-lg-</td>
-</tr>
-</tbody>
-</table>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;ul class=&quot;row list-unstyled&quot;&gt;  
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;1&lt;/li&gt;
-            &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;2&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;3&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;4&lt;/li&gt;
-      &lt;/ul&gt;
-&lt;/div&gt;
-代码运行的结果是：当screen≥1200px,显示为一行四列；当screen≥992px,显示为两行两列；
-                当screen≥768px,显示为一行四列；当screen＜768px,显示为两行两列；
-                ps：当前写的栅格结构是大于所规定的值之后才显示所写结构的样式；
-</code></pre><p></p><h4>列偏移</h4><br>使用 .col-md-offset-<em> 类可以将列向右侧偏移。这些类实际是通过使用 </em> 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。<p></p>
-<p></p><h4>嵌套列</h4><br>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。<p></p>
-<pre><code>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-9&quot;&gt;
-    Level 1: .col-sm-9
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
-        Level 2: .col-xs-8 .col-sm-6
-      &lt;/div&gt;
-      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
-        Level 2: .col-xs-4 .col-sm-6
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-Level 1: .col-sm-9        作为父级存在
-Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
-</code></pre>
+        <h3 id="Jade介绍"><a href="#Jade介绍" class="headerlink" title="Jade介绍"></a>Jade介绍</h3><p>Jade是一个基于javascript，可以运行于node与浏览器环境的一个前端模板引擎。</p>
+<h4 id="gulp-jade的安装"><a href="#gulp-jade的安装" class="headerlink" title="gulp-jade的安装"></a>gulp-jade的安装</h4><p>1.先建立一个jade文件夹，然后再终端初始化npm init生成package.json文件<br>2.在nodeJs中输入以下命令npm install gulp-jade –save-dev下载gulp-jade</p>
+<a id="more"></a>
+<h4 id="gulp-jade运行"><a href="#gulp-jade运行" class="headerlink" title="gulp-jade运行"></a>gulp-jade运行</h4><p>在jade文件夹下新建一个test.jade的文件，在此文件下写入一些内容；</p>
+<p>示例如下：</p>
+<pre><code>doctype
+html
+    head
+    meta(charset=&quot;utf-8&quot;)
+    title
+body
+div 我是div
+include a.jade
+h2#heihei.haha.hhehe hello
+    span 10029
+    | world
+em 我是em
+.qiaqia(style=&quot;color:red;font-size:18px;&quot;) 你好jade
+</code></pre><p>在jade建个gulpfile.js文件，并写入以下内容使其能正确转义    </p>
+<pre><code> gulp.task(&apos;jade&apos;,function(){
+ gulp.src(&quot;jade/jade.jade&quot;) //获取jade文件夹下的所有的jade文件
+ .pipe(jade()) //将所有的jade文件分别转换成标准的html格式
+ .pipe(gulp.dest(&apos;jade&apos;)) //设置输出文件存储位置
+})
+    gulp.task(&apos;default&apos;,[&apos;jade&apos;])
+</code></pre><p>在终端执行gulp，完成转换。<br>转换后压缩代码如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;div&gt;我是div&lt;/div&gt;&lt;span&gt;&lt;/span&gt;&lt;div&gt;我是div&lt;p&gt;我时间额&lt;/p&gt;&lt;/div&gt;&lt;h2 id=&quot;heihei&quot; class=&quot;haha hhehe&quot;&gt;hello&lt;span&gt;10029&lt;/span&gt;world&lt;/h2&gt;&lt;em&gt;我是em&lt;/em&gt;&lt;div style=&quot;color:red;font-size:18px;&quot; class=&quot;qiaqia&quot;&gt;你好jade&lt;/div&gt;&lt;/html&gt;
+</code></pre><h4 id="jade语法使用小技巧"><a href="#jade语法使用小技巧" class="headerlink" title="jade语法使用小技巧"></a>jade语法使用小技巧</h4><p>1、在jade中添加标签通过直接添加标签名来实现；<br>2、对于同一级元素，使用tab使同级元素距边界同距离左对齐，对于父子级元素，使用tab使子级元素水平方向多余父级一个tab位置。不能使用空格来实现距离对齐；<br>3、添加类名，id名：在元素后直接加类名，id名, div.className 或 div.IdName；<br>4、添加元素的属性：在元素后直接加（），在（）添加属性 a(href=”#”,title=”链接”)；<br>5、添加文本内容：(1)通过在文字前面添加竖线符号“|”可让 jade 原样输出内容;(2)在html标签标记<br>后面通过空格隔开文本内容。<br>6、添加文本注释：可以通过双斜杠进行注释，jade有3种注释方式，可以分别对应输出html注释、不输出html注释、块级html注释。</p>
+
       
     </div>
 
@@ -364,21 +328,27 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/gulp-jade/" rel="tag">#gulp-jade</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/19/bootstrap的图片图标及表格/" rel="next" title="bootstrap的图片图标及表格">
-                <i class="fa fa-chevron-left"></i> bootstrap的图片图标及表格
+              <a href="/2016/01/05/canvas基础/" rel="next" title="canvas基础">
+                <i class="fa fa-chevron-left"></i> canvas基础
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/05/canvas基础/" rel="prev" title="canvas基础">
-                canvas基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/29/面向对象和原型/" rel="prev" title="面向对象和原型">
+                面向对象和原型 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -405,8 +375,8 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/21/bootstrap栅格结构/"
-           data-title="bootstrap栅格结构" data-url="http://yoursite.com/2015/12/21/bootstrap栅格结构/">
+      <div class="ds-thread" data-thread-key="2016/02/27/gulp-jade运用/"
+           data-title="gulp-jade运用" data-url="http://yoursite.com/2016/02/27/gulp-jade运用/">
       </div>
     
   </div>
@@ -528,7 +498,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">bootstrap的栅格结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">bootstrap的结构被container包裹着，自动居中，不超过12列。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">列偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套列</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jade介绍"><span class="nav-number">1.</span> <span class="nav-text">Jade介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gulp-jade的安装"><span class="nav-number">1.1.</span> <span class="nav-text">gulp-jade的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gulp-jade运行"><span class="nav-number">1.2.</span> <span class="nav-text">gulp-jade运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jade语法使用小技巧"><span class="nav-number">1.3.</span> <span class="nav-text">jade语法使用小技巧</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -84,19 +84,15 @@
 
 
 
-<meta name="description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap栅格结构">
-<meta property="og:url" content="http://yoursite.com/2015/12/21/bootstrap栅格结构/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小康的博客">
+<meta property="og:url" content="http://yoursite.com/tags/Javascript/index.html">
 <meta property="og:site_name" content="小康的博客">
-<meta property="og:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
-<meta property="og:updated_time" content="2016-07-29T12:23:43.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap栅格结构">
-<meta name="twitter:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="twitter:title" content="小康的博客">
+<meta name="twitter:description">
 
 
 
@@ -114,7 +110,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
   };
 </script>
 
-  <title> bootstrap栅格结构 | 小康的博客 </title>
+  <title> Tag: Javascript | 小康的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -135,7 +131,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,189 +209,74 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        Javascript
+        <small>Tag</small>
+      </h2>
+    </div>
 
     
-      <header class="post-header">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2016/05/21/Javascript排序算法/" itemprop="url">
               
-                bootstrap栅格结构
+                <span itemprop="name">Javascript排序算法</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-21T19:56:45+08:00" content="2015-12-21">
-              2015-12-21
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-05-21T08:27:37+08:00"
+              content="2016-05-21" >
+          05-21
+        </time>
+      </div>
 
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/21/bootstrap栅格结构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/bootstrap栅格结构/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p></p><h3>bootstrap的栅格结构</h3><p></p>
-<p></p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br><a id="more"></a><br>根据浏览器屏幕的划分：<p></p>
-<table>
-<thead>
-<tr>
-<th>浏览器屏幕大小：</th>
-<th>超小屏幕(手机) (&lt;768px)</th>
-<th>小屏幕(平板) (≥768px)</th>
-<th>中等屏幕 桌面显示器 (≥992px)</th>
-<th>大屏幕 大桌面显示器 (≥1200px)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>栅格系统行为</td>
-<td>总是水平排列（只有小于768px）</td>
-<td>开始是堆叠在一起的，当大于这些阈值时将变为水平排列C （后面三列适用）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>.container 最大宽度</td>
-<td>None （自动）</td>
-<td>750px</td>
-<td>970px</td>
-<td>1170px</td>
-</tr>
-<tr>
-<td>类前缀</td>
-<td>.col-xs-</td>
-<td>.col-sm-</td>
-<td>.col-md-</td>
-<td>.col-lg-</td>
-</tr>
-</tbody>
-</table>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;ul class=&quot;row list-unstyled&quot;&gt;  
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;1&lt;/li&gt;
-            &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;2&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;3&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;4&lt;/li&gt;
-      &lt;/ul&gt;
-&lt;/div&gt;
-代码运行的结果是：当screen≥1200px,显示为一行四列；当screen≥992px,显示为两行两列；
-                当screen≥768px,显示为一行四列；当screen＜768px,显示为两行两列；
-                ps：当前写的栅格结构是大于所规定的值之后才显示所写结构的样式；
-</code></pre><p></p><h4>列偏移</h4><br>使用 .col-md-offset-<em> 类可以将列向右侧偏移。这些类实际是通过使用 </em> 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。<p></p>
-<p></p><h4>嵌套列</h4><br>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。<p></p>
-<pre><code>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-9&quot;&gt;
-    Level 1: .col-sm-9
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
-        Level 2: .col-xs-8 .col-sm-6
-      &lt;/div&gt;
-      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
-        Level 2: .col-xs-4 .col-sm-6
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-Level 1: .col-sm-9        作为父级存在
-Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
-</code></pre>
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/12/19/bootstrap的图片图标及表格/" rel="next" title="bootstrap的图片图标及表格">
-                <i class="fa fa-chevron-left"></i> bootstrap的图片图标及表格
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/05/canvas基础/" rel="prev" title="canvas基础">
-                canvas基础 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
+    
       
-    </div>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/03/21/Javascript数组算法/" itemprop="url">
+              
+                <span itemprop="name">Javascript数组算法</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-03-21T15:18:01+08:00"
+              content="2016-03-21" >
+          03-21
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
   </div>
+
+  
 
 
           </div>
@@ -403,14 +284,6 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2015/12/21/bootstrap栅格结构/"
-           data-title="bootstrap栅格结构" data-url="http://yoursite.com/2015/12/21/bootstrap栅格结构/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -430,17 +303,8 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -521,17 +385,6 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">bootstrap的栅格结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">bootstrap的结构被container包裹着，自动居中，不超过12列。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">列偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套列</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -633,10 +486,6 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 

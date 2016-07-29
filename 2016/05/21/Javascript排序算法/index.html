@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="description" content="序接触前端已经有一段时间了，可能好多程序猿都会觉得前端开发碰不到数据结构，算法的知识，在日常工作中可能永远都不会需要去了解的很深，没什么用，自我感觉对基础算法的了解能使我们在工作中运用这些基本的思想，写出更优的代码，更易于维护的代码。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap栅格结构">
-<meta property="og:url" content="http://yoursite.com/2015/12/21/bootstrap栅格结构/index.html">
+<meta property="og:title" content="Javascript排序算法">
+<meta property="og:url" content="http://yoursite.com/2016/05/21/Javascript排序算法/index.html">
 <meta property="og:site_name" content="小康的博客">
-<meta property="og:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
-<meta property="og:updated_time" content="2016-07-29T12:23:43.000Z">
+<meta property="og:description" content="序接触前端已经有一段时间了，可能好多程序猿都会觉得前端开发碰不到数据结构，算法的知识，在日常工作中可能永远都不会需要去了解的很深，没什么用，自我感觉对基础算法的了解能使我们在工作中运用这些基本的思想，写出更优的代码，更易于维护的代码。">
+<meta property="og:updated_time" content="2016-05-21T09:19:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap栅格结构">
-<meta name="twitter:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="twitter:title" content="Javascript排序算法">
+<meta name="twitter:description" content="序接触前端已经有一段时间了，可能好多程序猿都会觉得前端开发碰不到数据结构，算法的知识，在日常工作中可能永远都不会需要去了解的很深，没什么用，自我感觉对基础算法的了解能使我们在工作中运用这些基本的思想，写出更优的代码，更易于维护的代码。">
 
 
 
@@ -114,7 +111,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
   };
 </script>
 
-  <title> bootstrap栅格结构 | 小康的博客 </title>
+  <title> Javascript排序算法 | 小康的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -234,7 +231,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
             
               
-                bootstrap栅格结构
+                Javascript排序算法
               
             
           </h1>
@@ -246,8 +243,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-21T19:56:45+08:00" content="2015-12-21">
-              2015-12-21
+            <time itemprop="dateCreated" datetime="2016-05-21T08:27:37+08:00" content="2016-05-21">
+              2016-05-21
             </time>
           </span>
 
@@ -257,8 +254,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/21/bootstrap栅格结构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/bootstrap栅格结构/" itemprop="commentsCount"></span>
+                <a href="/2016/05/21/Javascript排序算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/Javascript排序算法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,70 +278,67 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
       
 
       
-        <p></p><h3>bootstrap的栅格结构</h3><p></p>
-<p></p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br><a id="more"></a><br>根据浏览器屏幕的划分：<p></p>
-<table>
-<thead>
-<tr>
-<th>浏览器屏幕大小：</th>
-<th>超小屏幕(手机) (&lt;768px)</th>
-<th>小屏幕(平板) (≥768px)</th>
-<th>中等屏幕 桌面显示器 (≥992px)</th>
-<th>大屏幕 大桌面显示器 (≥1200px)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>栅格系统行为</td>
-<td>总是水平排列（只有小于768px）</td>
-<td>开始是堆叠在一起的，当大于这些阈值时将变为水平排列C （后面三列适用）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>.container 最大宽度</td>
-<td>None （自动）</td>
-<td>750px</td>
-<td>970px</td>
-<td>1170px</td>
-</tr>
-<tr>
-<td>类前缀</td>
-<td>.col-xs-</td>
-<td>.col-sm-</td>
-<td>.col-md-</td>
-<td>.col-lg-</td>
-</tr>
-</tbody>
-</table>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;ul class=&quot;row list-unstyled&quot;&gt;  
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;1&lt;/li&gt;
-            &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;2&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;3&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;4&lt;/li&gt;
-      &lt;/ul&gt;
-&lt;/div&gt;
-代码运行的结果是：当screen≥1200px,显示为一行四列；当screen≥992px,显示为两行两列；
-                当screen≥768px,显示为一行四列；当screen＜768px,显示为两行两列；
-                ps：当前写的栅格结构是大于所规定的值之后才显示所写结构的样式；
-</code></pre><p></p><h4>列偏移</h4><br>使用 .col-md-offset-<em> 类可以将列向右侧偏移。这些类实际是通过使用 </em> 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。<p></p>
-<p></p><h4>嵌套列</h4><br>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。<p></p>
-<pre><code>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-9&quot;&gt;
-    Level 1: .col-sm-9
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
-        Level 2: .col-xs-8 .col-sm-6
-      &lt;/div&gt;
-      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
-        Level 2: .col-xs-4 .col-sm-6
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-Level 1: .col-sm-9        作为父级存在
-Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
+        <h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>接触前端已经有一段时间了，可能好多程序猿都会觉得前端开发碰不到数据结构，算法的知识，在日常工作中可能永远都不会需要去了解的很深，没什么用，自我感觉对基础算法的了解能使我们在工作中运用这些基本的思想，写出更优的代码，更易于维护的代码。<br><a id="more"></a></p>
+<h2 id="常用的排序算法"><a href="#常用的排序算法" class="headerlink" title="常用的排序算法"></a>常用的排序算法</h2><p>在算法中排序的算法很多种，本文我主要介绍javascript中常见的三种算法：快速排序法、冒泡法、选择排序法。    </p>
+<h4 id="快速排序法"><a href="#快速排序法" class="headerlink" title="快速排序法"></a>快速排序法</h4><p>简述步骤：     </p>
+<p>1.从数列中挑出一个元素，称为 ”基准”；<br>2.重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区操作；<br>3.递归地把小于基准值元素的子数列和大于基准值元素的子数列排序。</p>
+<p>上代码：</p>
+<pre><code> function quicklySort(arr){
+    if (arr.length&lt;2) {
+        return arr;
+    }
+    var pivotIndex=Math.floor(arr.length/2);  //下舍入取数组的中间位置
+    var pivot=arr.splice(pivotIndex,1)[0];    //实现数组的定位删除
+    var left=[];
+    var right=[];
+    for(var i=0;i&lt;arr.length;i++){
+        if (arr[i]&lt;pivot) {
+            left.push(arr[i]);
+        }else {
+            right.push(arr[i])
+        }
+    }
+    return quicklySort(left).concat([pivot], quicklySort(right))
+}
+</code></pre><h4 id="冒泡法"><a href="#冒泡法" class="headerlink" title="冒泡法"></a>冒泡法</h4><p>简述步骤：   </p>
+<p>1、从数组的第一个开始两两比较，如果前面的元素大于后面的元素，两个元素交换。</p>
+<p>2、忽略最后一个元素，重复第一步。</p>
+<p>上代码：</p>
+<pre><code> function bubbleSort(arr) {
+if (arr.length&lt;2) {
+    return arr;
+}
+for(var i=0;i&lt;arr.length;i++){
+    for(var j=0;j&lt;arr.length-1;j++){
+        if (arr[j]&gt;arr[j+1]) {
+            var temp;
+            temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp;
+        }
+    }
+}
+return arr;
+}
+</code></pre><h4 id="选择排序法"><a href="#选择排序法" class="headerlink" title="选择排序法"></a>选择排序法</h4><p>简述步骤：<br>1、遍历整个数组，假设第一个元素为整个元素最小值，用这个元素跟数组其他元素进行比较，如果遇到了更小的元素，将更小的元素设为最小的元素，并将两个元素的位置进行交换，这样在遍历数组之后最小的元素就被移动到了第一位。     </p>
+<p>2、把剩余的数组重复第一步操作，直到最后只剩下一个元素那么前面的元素一定都是有序的而且都是不大于最后一个的，这样就得到一个有序的数组。</p>
+<p>上代码：</p>
+<pre><code>function selectionSort(arr) {
+    if (arr.length&lt;2) {
+        return arr;
+    }
+    for(var i=0;i&lt;arr.length;i++){
+        for(var j=i+1;j&lt;arr.length;j++){
+            if(arr[i]&gt;arr[j]){
+                var temp;
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    return arr;
+}
 </code></pre>
       
     </div>
@@ -364,22 +358,24 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/19/bootstrap的图片图标及表格/" rel="next" title="bootstrap的图片图标及表格">
-                <i class="fa fa-chevron-left"></i> bootstrap的图片图标及表格
+              <a href="/2016/05/18/scroll滚动页面渲染优化/" rel="next" title="scroll滚动页面渲染优化">
+                <i class="fa fa-chevron-left"></i> scroll滚动页面渲染优化
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/05/canvas基础/" rel="prev" title="canvas基础">
-                canvas基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -405,8 +401,8 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/21/bootstrap栅格结构/"
-           data-title="bootstrap栅格结构" data-url="http://yoursite.com/2015/12/21/bootstrap栅格结构/">
+      <div class="ds-thread" data-thread-key="2016/05/21/Javascript排序算法/"
+           data-title="Javascript排序算法" data-url="http://yoursite.com/2016/05/21/Javascript排序算法/">
       </div>
     
   </div>
@@ -528,7 +524,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">bootstrap的栅格结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">bootstrap的结构被container包裹着，自动居中，不超过12列。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">列偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套列</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的排序算法"><span class="nav-number">2.</span> <span class="nav-text">常用的排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序法"><span class="nav-number">2.0.1.</span> <span class="nav-text">快速排序法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡法"><span class="nav-number">2.0.2.</span> <span class="nav-text">冒泡法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择排序法"><span class="nav-number">2.0.3.</span> <span class="nav-text">选择排序法</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="description" content="序在我们的工作中对于数组的运用还是比较多的，为了方便日常的使用，今天总结一下。主要包含以下四种：数组去重、数组顺序打乱、数组判断、数组排序      
+为了方便大家理解，在每个方法前添加相关概念详解，对概念熟知的略过。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap栅格结构">
-<meta property="og:url" content="http://yoursite.com/2015/12/21/bootstrap栅格结构/index.html">
+<meta property="og:title" content="Javascript数组算法">
+<meta property="og:url" content="http://yoursite.com/2016/03/21/Javascript数组算法/index.html">
 <meta property="og:site_name" content="小康的博客">
-<meta property="og:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
-<meta property="og:updated_time" content="2016-07-29T12:23:43.000Z">
+<meta property="og:description" content="序在我们的工作中对于数组的运用还是比较多的，为了方便日常的使用，今天总结一下。主要包含以下四种：数组去重、数组顺序打乱、数组判断、数组排序      
+为了方便大家理解，在每个方法前添加相关概念详解，对概念熟知的略过。">
+<meta property="og:updated_time" content="2016-07-29T14:41:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap栅格结构">
-<meta name="twitter:description" content="bootstrap的栅格结构
-bootstrap的结构被container包裹着，自动居中，不超过12列。">
+<meta name="twitter:title" content="Javascript数组算法">
+<meta name="twitter:description" content="序在我们的工作中对于数组的运用还是比较多的，为了方便日常的使用，今天总结一下。主要包含以下四种：数组去重、数组顺序打乱、数组判断、数组排序      
+为了方便大家理解，在每个方法前添加相关概念详解，对概念熟知的略过。">
 
 
 
@@ -114,7 +114,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
   };
 </script>
 
-  <title> bootstrap栅格结构 | 小康的博客 </title>
+  <title> Javascript数组算法 | 小康的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -234,7 +234,7 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
             
               
-                bootstrap栅格结构
+                Javascript数组算法
               
             
           </h1>
@@ -246,8 +246,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2015-12-21T19:56:45+08:00" content="2015-12-21">
-              2015-12-21
+            <time itemprop="dateCreated" datetime="2016-03-21T15:18:01+08:00" content="2016-03-21">
+              2016-03-21
             </time>
           </span>
 
@@ -257,8 +257,8 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/21/bootstrap栅格结构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/bootstrap栅格结构/" itemprop="commentsCount"></span>
+                <a href="/2016/03/21/Javascript数组算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/21/Javascript数组算法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,70 +281,90 @@ bootstrap的结构被container包裹着，自动居中，不超过12列。">
       
 
       
-        <p></p><h3>bootstrap的栅格结构</h3><p></p>
-<p></p><h4>bootstrap的结构被container包裹着，自动居中，不超过12列。</h4><br><a id="more"></a><br>根据浏览器屏幕的划分：<p></p>
-<table>
-<thead>
-<tr>
-<th>浏览器屏幕大小：</th>
-<th>超小屏幕(手机) (&lt;768px)</th>
-<th>小屏幕(平板) (≥768px)</th>
-<th>中等屏幕 桌面显示器 (≥992px)</th>
-<th>大屏幕 大桌面显示器 (≥1200px)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>栅格系统行为</td>
-<td>总是水平排列（只有小于768px）</td>
-<td>开始是堆叠在一起的，当大于这些阈值时将变为水平排列C （后面三列适用）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>.container 最大宽度</td>
-<td>None （自动）</td>
-<td>750px</td>
-<td>970px</td>
-<td>1170px</td>
-</tr>
-<tr>
-<td>类前缀</td>
-<td>.col-xs-</td>
-<td>.col-sm-</td>
-<td>.col-md-</td>
-<td>.col-lg-</td>
-</tr>
-</tbody>
-</table>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;ul class=&quot;row list-unstyled&quot;&gt;  
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;1&lt;/li&gt;
-            &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;2&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;3&lt;/li&gt;
-        &lt;li class=&quot;col-lg-3 col-md-6 col-sm-3 col-xs-6&quot;&gt;4&lt;/li&gt;
-      &lt;/ul&gt;
-&lt;/div&gt;
-代码运行的结果是：当screen≥1200px,显示为一行四列；当screen≥992px,显示为两行两列；
-                当screen≥768px,显示为一行四列；当screen＜768px,显示为两行两列；
-                ps：当前写的栅格结构是大于所规定的值之后才显示所写结构的样式；
-</code></pre><p></p><h4>列偏移</h4><br>使用 .col-md-offset-<em> 类可以将列向右侧偏移。这些类实际是通过使用 </em> 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。<p></p>
-<p></p><h4>嵌套列</h4><br>为了使用内置的栅格系统将内容再次嵌套，可以通过添加一个新的 .row 元素和一系列 .col-sm-<em> 元素到已经存在的 .col-sm-</em> 元素内。被嵌套的行（row）所包含的列（column）的个数不能超过12（其实，没有要求你必须占满12列）。<p></p>
-<pre><code>&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-9&quot;&gt;
-    Level 1: .col-sm-9
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
-        Level 2: .col-xs-8 .col-sm-6
-      &lt;/div&gt;
-      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
-        Level 2: .col-xs-4 .col-sm-6
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-Level 1: .col-sm-9        作为父级存在
-Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
+        <h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>在我们的工作中对于数组的运用还是比较多的，为了方便日常的使用，今天总结一下。主要包含以下四种：数组去重、数组顺序打乱、数组判断、数组排序      </p>
+<p>为了方便大家理解，在每个方法前添加相关概念详解，对概念熟知的略过。  </p>
+<a id="more"></a>
+<h3 id="一-数组去重"><a href="#一-数组去重" class="headerlink" title="一.数组去重"></a>一.数组去重</h3><h6 id="1-indexOf方法"><a href="#1-indexOf方法" class="headerlink" title="1.indexOf方法"></a>1.indexOf方法</h6><p>概念：indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。第一位出现返回0，若没有出现则返回-1。<br>strObj.indexOf(subString[, startIndex])    </p>
+<ul>
+<li>参数 strObj 必选项。String 对象或文字。  </li>
+<li>subString 必选项。要在 String 对象中查找的子字符串。  </li>
+<li>tarIndex 可选项。该整数值指出在 String 对象内开始查找的索引。如果省略，则从字符串的开始处查找。 </li>
+</ul>
+<pre><code>function unique (arr) {
+  var result = []; 
+  for (var i = 0; i &lt; arr.length; i++){
+if (result.indexOf(arr[i]) == -1) result.push(arr[i]);
+  }
+  return result;
+}
+</code></pre><h6 id="2-相邻比较法"><a href="#2-相邻比较法" class="headerlink" title="2.相邻比较法"></a>2.相邻比较法</h6><p>解叙：相邻元素比较若相同加入新数组，返回新数组。</p>
+<pre><code> function unique (arr) {
+arr.sort();
+var result=[arr[0]];
+for(var i = 1; i &lt; arr.length; i++){
+    if( arr[i] !== arr[i-1]) {
+        result.push(arr[i]);
+    }
+}
+return result;
+}
+</code></pre><h6 id="3-shift方法"><a href="#3-shift方法" class="headerlink" title="3.shift方法"></a>3.shift方法</h6><p>概念：shift（）方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。<br>ps：要删除并返回数组的最后一个元素，请使用 pop() 方法。   </p>
+<pre><code>function unique(arr,newArr) {
+ var num;
+ if (-1 == arr.indexOf(num = arr.shift()))     newArr.push(num);
+ arr.length &amp;&amp; unique(arr,newArr)
+ if(arr.length==0){
+   return newArr;
+ };
+}
+</code></pre><h3 id="二、数组顺序打乱"><a href="#二、数组顺序打乱" class="headerlink" title="二、数组顺序打乱"></a>二、数组顺序打乱</h3><h6 id="1-splice方法"><a href="#1-splice方法" class="headerlink" title="1.splice方法"></a>1.splice方法</h6><p> 概念：Math.random()随机返回一个大于或等于 0 但小于 1 的符号为正的数字值。<br>  splice（）:可以用于插入、删除或替换数组的元素；   </p>
+<ul>
+<li><p>删除-用于删除元素，两个参数，第一个参数（要删除第一项的位置），第二个参数（要删除的项数）</p>
+</li>
+<li><p>插入-向数组指定位置插入任意项元素。三个参数，第一个参数（起始位置），第二个参数（0），第三个参数（插入的项）</p>
+</li>
+<li><p>替换-向数组指定位置插入任意项元素，同时删除任意数量的项，三个参数。第一个参数（起始位置），第二个参数（删除的项数），第三个参数（插入任意数量的项） </p>
+</li>
+</ul>
+<pre><code>     function shuffle(array) {  
+      var result = [],
+        n = array.length,
+        i;
+  while (n) {
+       i = Math.floor(Math.random() * n--);
+    result.push(array.splice(i, 1)[0]);
+    }
+    return result;
+}
+</code></pre><h6 id="2-首位交换原则"><a href="#2-首位交换原则" class="headerlink" title="2.首位交换原则"></a>2.首位交换原则</h6><pre><code>function shuffle(array) {   
+  var m = array.length,
+      temp, i;    
+while (m) {   
+    i = Math.floor(Math.random() * m--);   
+    temp = array[m];  
+    array[m] = array[i];   
+    array[i] = temp;  
+}  
+return array; 
+}
+</code></pre><h3 id="三、判断数组"><a href="#三、判断数组" class="headerlink" title="三、判断数组"></a>三、判断数组</h3><h6 id="instanceof运算符"><a href="#instanceof运算符" class="headerlink" title="instanceof运算符"></a>instanceof运算符</h6><p>instanceof 运算符要求其左边的运算数是一个对象，右边的运算数是对象类的名字或构造函数。</p>
+<pre><code>var arrNew = [];  
+arrNew instanceof Array;
+</code></pre><h3 id="四、数组排序"><a href="#四、数组排序" class="headerlink" title="四、数组排序"></a>四、数组排序</h3><h6 id="sort-运算符排序法"><a href="#sort-运算符排序法" class="headerlink" title="sort()运算符排序法"></a>sort()运算符排序法</h6><p>sort()方法使数组中的元素按照一定的顺序排列。</p>
+<pre><code>升序： 
+function sortNum(a,b) {
+ return a-b;
+}
+var myarr = new Array(&quot;80&quot;,&quot;16&quot;,&quot;50&quot;,&quot;6&quot;,&quot;100&quot;,&quot;1&quot;);
+myarr.sort(sortNum)
+
+降序：b-a即可
+
+      function sortNum(a,b) {
+     return b-a;
+    }
+    var myarr = new Array(&quot;80&quot;,&quot;16&quot;,&quot;50&quot;,&quot;6&quot;,&quot;100&quot;,&quot;1&quot;);
+    myarr.sort(sortNum)
 </code></pre>
       
     </div>
@@ -364,21 +384,27 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/19/bootstrap的图片图标及表格/" rel="next" title="bootstrap的图片图标及表格">
-                <i class="fa fa-chevron-left"></i> bootstrap的图片图标及表格
+              <a href="/2016/02/29/面向对象和原型/" rel="next" title="面向对象和原型">
+                <i class="fa fa-chevron-left"></i> 面向对象和原型
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/05/canvas基础/" rel="prev" title="canvas基础">
-                canvas基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/18/scroll滚动页面渲染优化/" rel="prev" title="scroll滚动页面渲染优化">
+                scroll滚动页面渲染优化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -405,8 +431,8 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/21/bootstrap栅格结构/"
-           data-title="bootstrap栅格结构" data-url="http://yoursite.com/2015/12/21/bootstrap栅格结构/">
+      <div class="ds-thread" data-thread-key="2016/03/21/Javascript数组算法/"
+           data-title="Javascript数组算法" data-url="http://yoursite.com/2016/03/21/Javascript数组算法/">
       </div>
     
   </div>
@@ -528,7 +554,7 @@ Level 2: .col-xs-8 .col-sm-6 Level 2: .col-xs-4 .col-sm-6  占满整个父级
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">bootstrap的栅格结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">bootstrap的结构被container包裹着，自动居中，不超过12列。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">列偏移</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">嵌套列</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-数组去重"><span class="nav-number">1.1.</span> <span class="nav-text">一.数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-indexOf方法"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">1.indexOf方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-相邻比较法"><span class="nav-number">1.1.0.0.2.</span> <span class="nav-text">2.相邻比较法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-shift方法"><span class="nav-number">1.1.0.0.3.</span> <span class="nav-text">3.shift方法</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、数组顺序打乱"><span class="nav-number">1.2.</span> <span class="nav-text">二、数组顺序打乱</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-splice方法"><span class="nav-number">1.2.0.0.1.</span> <span class="nav-text">1.splice方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-首位交换原则"><span class="nav-number">1.2.0.0.2.</span> <span class="nav-text">2.首位交换原则</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、判断数组"><span class="nav-number">1.3.</span> <span class="nav-text">三、判断数组</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#instanceof运算符"><span class="nav-number">1.3.0.0.1.</span> <span class="nav-text">instanceof运算符</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、数组排序"><span class="nav-number">1.4.</span> <span class="nav-text">四、数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#sort-运算符排序法"><span class="nav-number">1.4.0.0.1.</span> <span class="nav-text">sort()运算符排序法</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
