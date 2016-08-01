@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小康的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="事件委托如今的JavaScript技术界里最火热的一项技术应该是‘事件委托(event delegation)’了。使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。基本概念非常简单，但仍有很多人不理解事件委托的工作原理。这里我将要解释事件委托是如何工作的，并提供几个纯JavaScri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="事件委托原理">
+<meta property="og:url" content="http://yoursite.com/2016/06/17/事件委托原理/index.html">
 <meta property="og:site_name" content="小康的博客">
-<meta property="og:description">
+<meta property="og:description" content="事件委托如今的JavaScript技术界里最火热的一项技术应该是‘事件委托(event delegation)’了。使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。基本概念非常简单，但仍有很多人不理解事件委托的工作原理。这里我将要解释事件委托是如何工作的，并提供几个纯JavaScri">
+<meta property="og:updated_time" content="2016-08-01T11:32:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小康的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="事件委托原理">
+<meta name="twitter:description" content="事件委托如今的JavaScript技术界里最火热的一项技术应该是‘事件委托(event delegation)’了。使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。基本概念非常简单，但仍有很多人不理解事件委托的工作原理。这里我将要解释事件委托是如何工作的，并提供几个纯JavaScri">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> Archiv | 小康的博客 </title>
+  <title> 事件委托原理 | 小康的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -131,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -209,408 +210,167 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Öhm..! Insgesamt 18 Artikel. Bleib dran.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/17/事件委托原理/" itemprop="url">
-              
-                <span itemprop="name">事件委托原理</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-17T19:21:54+08:00"
-              content="2016-06-17" >
-          06-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/21/Javascript排序算法/" itemprop="url">
-              
-                <span itemprop="name">Javascript排序算法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-21T08:27:37+08:00"
-              content="2016-05-21" >
-          05-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/18/scroll滚动页面渲染优化/" itemprop="url">
-              
-                <span itemprop="name">scroll滚动页面渲染优化</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-18T15:48:38+08:00"
-              content="2016-05-18" >
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/21/Javascript数组算法/" itemprop="url">
-              
-                <span itemprop="name">Javascript数组算法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-21T15:18:01+08:00"
-              content="2016-03-21" >
-          03-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/02/29/面向对象和原型/" itemprop="url">
-              
-                <span itemprop="name">面向对象和原型</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-02-29T20:42:16+08:00"
-              content="2016-02-29" >
-          02-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/02/27/gulp-jade运用/" itemprop="url">
-              
-                <span itemprop="name">gulp-jade运用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-02-27T22:38:11+08:00"
-              content="2016-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/01/05/canvas基础/" itemprop="url">
-              
-                <span itemprop="name">canvas基础</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-01-05T22:24:28+08:00"
-              content="2016-01-05" >
-          01-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2015/12/21/bootstrap栅格结构/" itemprop="url">
-              
-                <span itemprop="name">bootstrap栅格结构</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-12-21T19:56:45+08:00"
-              content="2015-12-21" >
-          12-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2015/12/19/bootstrap的图片图标及表格/" itemprop="url">
-              
-                <span itemprop="name">bootstrap的图片图标及表格</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-12-19T21:07:00+08:00"
-              content="2015-12-19" >
-          12-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2015/12/18/bootstrap的简要介绍/" itemprop="url">
-              
-                <span itemprop="name">bootstrap的简要介绍</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-12-18T20:47:50+08:00"
-              content="2015-12-18" >
-          12-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                事件委托原理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-06-17T19:21:54+08:00" content="2016-06-17">
+              2016-06-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/17/事件委托原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/17/事件委托原理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
 
 
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p><h4>事件委托</h4><br>如今的JavaScript技术界里最火热的一项技术应该是‘事件委托(event delegation)’了。使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。基本概念非常简单，但仍有很多人不理解事件委托的工作原理。这里我将要解释事件委托是如何工作的，并提供几个纯JavaScript的基本事件委托的例子。<br><a id="more"></a><br>假定我们有一个UL元素，它有几个子元素：<p></p>
+<pre><code>&lt;ul id=&quot;parent-list&quot;&gt;
+    &lt;li id=&quot;post-1&quot;&gt;Item 1&lt;/li&gt;
+    &lt;li id=&quot;post-2&quot;&gt;Item 2&lt;/li&gt;
+    &lt;li id=&quot;post-3&quot;&gt;Item 3&lt;/li&gt;
+    &lt;li id=&quot;post-4&quot;&gt;Item 4&lt;/li&gt;
+    &lt;li id=&quot;post-5&quot;&gt;Item 5&lt;/li&gt;
+    &lt;li id=&quot;post-6&quot;&gt;Item 6&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>我们还假设，当每个子元素被点击时，将会有各自不同的事件发生。你可以给每个独立的li元素添加事件监听器，但有时这些li元素可能会被删除，可能会有新增，监听它们的新增或删除事件将会是一场噩梦，尤其是当你的监听事件的代码放在应用的另一个地方时。但是，如果你将监听器安放到它们的父元素上呢？你如何能知道是那个子元素被点击了？</p>
+<p>简单：当子元素的事件冒泡到父ul元素时，你可以检查事件对象的target属性，捕获真正被点击的节点元素的引用。下面是一段很简单的JavaScript代码，演示了事件委托的过程：</p>
+<pre><code>// 找到父元素，添加监听器...
+document.getElementById(&quot;parent-list&quot;).addEventListener(&quot;click&quot;,function(e) {
+    // e.target是被点击的元素!
+    // 如果被点击的是li元素
+    if(e.target &amp;&amp; e.target.nodeName == &quot;LI&quot;) {
+        // 找到目标，输出ID!
+        console.log(&quot;List item &quot;,e.target.id.replace(&quot;post-&quot;),&quot; was clicked!&quot;);
+    }
+});
+</code></pre><p>第一步是给父元素添加事件监听器。当有事件触发监听器时，检查事件的来源，排除非li子元素事件。如果是一个li元素，我们就找到了目标！如果不是一个li元素，事件将被忽略。这个例子非常简单，UL和li是标准的父子搭配。</p>
+<p>让我们试验一些差异比较大的元素搭配。假设我们有一个父元素div，里面有很多子元素，但我们关心的是里面的一个带有”classA” CSS类的A标记：</p>
+<pre><code>// 获得父元素DIV, 添加监听器...
+document.getElementById(&quot;myDiv&quot;).addEventListener(&quot;click&quot;,function(e) {
+    // e.target是被点击的元素
+    if(e.target &amp;&amp; e.target.nodeName == &quot;A&quot;) {
+        // 获得CSS类名
+        var classes = e.target.className.split(&quot; &quot;);
+        // 搜索匹配!
+        if(classes) {
+            // For every CSS class the element has...
+            for(var x = 0; x &lt; classes.length; x++) {
+                // If it has the CSS class we want...
+                if(classes[x] == &quot;classA&quot;) {
+                    // Bingo!
+                    console.log(&quot;Anchor element clicked!&quot;);
+
+                    // Now do something here....
+
+                }
+            }
+        }
+
+    }
+});
+</code></pre><p>上面这个例子中不仅比较了标签名，而且比较了CSS类名。虽然稍微复杂了一点，但还是很具代表性的。比如，如果某个A标记里有一个span标记，则这个span将会成为target元素。这个时候，我们需要上溯DOM树结构，找到里面是否有一个 A.classA 的元素。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/21/Javascript排序算法/" rel="next" title="Javascript排序算法">
+                <i class="fa fa-chevron-left"></i> Javascript排序算法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -618,6 +378,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/17/事件委托原理/"
+           data-title="事件委托原理" data-url="http://yoursite.com/2016/06/17/事件委托原理/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -637,8 +405,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -719,6 +496,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">事件委托</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -820,11 +608,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
